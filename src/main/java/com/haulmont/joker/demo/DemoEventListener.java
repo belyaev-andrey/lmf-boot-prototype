@@ -1,6 +1,5 @@
 package com.haulmont.joker.demo;
 
-import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -8,9 +7,9 @@ import org.springframework.stereotype.Component;
 public class DemoEventListener {
 
     @EventListener
-    public String handleContextStart(ApplicationStartedEvent appStartedEvent) {
-        System.out.println("Application event handled: "+appStartedEvent.getTimestamp());
-        return appStartedEvent.toString();
+    public String handleContextStart(HelloEvent helloEvent) {
+        System.out.println("Application event handled at: "+helloEvent.getTimestamp()+" message was: "+helloEvent.getHelloString());
+        return helloEvent.toString();
     }
 
 }
