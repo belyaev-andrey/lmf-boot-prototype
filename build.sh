@@ -4,6 +4,7 @@ pwd
 unzip target/lmf-boot-prototype-0.0.1-SNAPSHOT.jar -d target/lmf-boot-prototype-0.0.1-SNAPSHOT
 echo CLASSPATH : ".:$(echo target/lmf-boot-prototype-0.0.1-SNAPSHOT/BOOT-INF/lib/*.jar | tr ' ' ':')":target/lmf-boot-prototype-0.0.1-SNAPSHOT/BOOT-INF/classes
 native-image  --no-server \
+              --allow-incomplete-classpath \
               -H:ReflectionConfigurationFiles=graal.json \
               -Dio.netty.noUnsafe=true \
               -H:+ReportUnsupportedElementsAtRuntime \
