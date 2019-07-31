@@ -55,20 +55,8 @@
   },
   {
     "name": "org.springframework.context.annotation.AnnotationConfigUtils",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "allDeclaredClasses" : true,
-    "allPublicClasses" : true
-  },
-  {
-    "name": "org.springframework.beans.factory.support.BeanDefinitionRegistry",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "allDeclaredClasses" : true,
-    "allPublicClasses" : true
+    "methods": [
+      { "name": "registerAnnotationConfigProcessors", "parameterTypes": ["org.springframework.beans.factory.support.BeanDefinitionRegistry"] }
+    ]
   }
 ]

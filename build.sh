@@ -6,7 +6,7 @@ echo CLASSPATH : ".:$(echo target/lmf-boot-prototype-0.0.1-SNAPSHOT/BOOT-INF/lib
 native-image  --no-server \
               --allow-incomplete-classpath \
               --no-fallback \
-              --initialize-at-build-time=org.springframework.util.unit.DataSize
+              --initialize-at-build-time=org.springframework.util.unit.DataSize \
               -H:ReflectionConfigurationFiles=graal.json \
               -Dio.netty.noUnsafe=true \
               -H:+ReportUnsupportedElementsAtRuntime \
